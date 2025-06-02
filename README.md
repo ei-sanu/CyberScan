@@ -8,7 +8,7 @@ Scan any URL for phishing, malware, and other online threats with our advanced c
 
 ## 🚀 Quick Start
 
-**[Scan Now →](your-deployment-url-here)**
+**[Scan Now →](https://cyberurlscanner.vercel.app/)**
 
 ## ✨ Core Features
 
@@ -28,7 +28,7 @@ Get instant results with our lightning-fast scanning technology and comprehensiv
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/detect-cyber-threats.git
+git clone [https://github.com/ei-sanu/CyberScan.git]
 
 # Navigate to project directory
 cd detect-cyber-threats
