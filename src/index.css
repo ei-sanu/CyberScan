@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background-color: #0a0a0f;
+  color: #ffffff;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #13131f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #5e35a7;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7e5cc0;
+}
+
+@layer components {
+  .cyberpunk-btn {
+    @apply relative px-6 py-3 overflow-hidden font-bold transition-all duration-300 border-2 border-cyber-purple-500 bg-cyber-dark text-white shadow-[0_0_10px_rgba(94,53,167,0.7)] hover:shadow-[0_0_15px_rgba(94,53,167,1)] hover:border-cyber-pink focus:outline-none focus:ring-2 focus:ring-cyber-purple-400 focus:ring-opacity-50 before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-cyber-purple-700 before:opacity-0 before:transition-opacity before:duration-300 hover:before:opacity-20;
+  }
+
+  .cyber-card {
+    @apply relative bg-cyber-dark border border-cyber-purple-700 rounded-md overflow-hidden shadow-lg before:absolute before:inset-0 before:border-t-2 before:border-l-2 before:border-cyber-pink before:rounded-md before:opacity-50 after:absolute after:inset-0 after:border-b-2 after:border-r-2 after:border-cyber-blue after:rounded-md after:opacity-50;
+  }
+
+  .glitch-text {
+    @apply relative inline-block;
+  }
+
+  .glitch-text::before,
+  .glitch-text::after {
+    @apply content-[attr(data-text)] absolute top-0 left-0 w-full h-full;
+  }
+
+  .glitch-text::before {
+    @apply text-cyber-pink left-[2px] animation-delay-[0.1s] clip-path-[polygon(0_0,_100%_0,_100%_45%,_0_45%)];
+  }
+
+  .glitch-text::after {
+    @apply text-cyber-blue left-[-2px] animation-delay-[0.2s] clip-path-[polygon(0_80%,_100%_20%,_100%_100%,_0_100%)];
+  }
+
+  .scanner-line {
+    @apply absolute left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-cyber-blue to-transparent shadow-[0_0_8px_rgba(5,217,232,0.8)];
+  }
+
+  .cyber-input {
+    @apply bg-cyber-dark border-2 border-cyber-purple-700 text-white px-4 py-2 focus:outline-none focus:border-cyber-pink focus:shadow-[0_0_10px_rgba(255,42,109,0.5)] transition-all duration-300;
+  }
+
+  .terminal-text {
+    @apply font-terminal text-cyber-green;
+  }
+}
